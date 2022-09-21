@@ -194,6 +194,6 @@ bool list_is_in(list_t *l, elem value) {
 //get element at certain position
 elem list_get_elem_at(list_t *l, int index) { return -1; }
 
-//get index of element
+//get index of element in linked list
 int list_get_index_of(list_t *l, elem value) { return -1; }
 
