@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "list.h"
+#include "list.c"
 //Author : Tolulope Akinlabi & Yoofi Williams
 
 int main() {
