@@ -25,7 +25,7 @@ node_t *node_alloc(elem value){
 
 //free the list
 void list_free(list_t *l) {
-  list_t current = current;
+  node_t current = list_t -> head;
   while (current != NULL){
     current = current->next;
     free(current);
@@ -35,7 +35,7 @@ void list_free(list_t *l) {
 
 //Print the entire list
 void list_print(list_t *l) {
-  node_t current = current;
+  node_t current = list_t -> head;
   if(current==NULL)
 	{
 		printf("Linked List is Empty\n");
@@ -52,7 +52,7 @@ void list_print(list_t *l) {
 //Print the length of list
 int list_length(list_t *l) {
   int counter = 0;
-  node_t *current = l -> head;
+  node_t current = list_t -> head;
   while (current != NULL){
     counter++;
     current = current -> next;
@@ -63,7 +63,7 @@ int list_length(list_t *l) {
 //Add to the back of linked list
 void list_add_to_back(list_t *l, elem value) {
   node_t *new_node;
-  node_t current = current;
+  node_t current = list_t -> head;
   new_node -> value  = value;
   new_node -> next = NULL;
   if (current == NULL){
@@ -81,7 +81,7 @@ void list_add_to_back(list_t *l, elem value) {
 //Add to the front of list
 void list_add_to_front(list_t *l, elem value) {
   node_t new_node;
-  node_t current = current;
+  node_t current = list_t -> head;
   new_node -> value  = value;
   new_node  -> next = NULL;
   if(current==NULL){
@@ -119,7 +119,7 @@ void list_add_at_index(list_t *l, elem value, int index) {
 
 //remove element from back of list
 elem list_remove_from_back(list_t *l) {
-  node_t current = current;
+  node_t current = list_t -> head;
   node_t prev = NULL;  
 
   if(current==NULL){
@@ -150,7 +150,7 @@ elem list_remove_from_front(list_t *l) {
 		return;
 	}
 	else{
-    list_t current = current;
+    node_t current = list_t -> head;
     current = current ->next;
     free(current);
   }
@@ -158,7 +158,7 @@ elem list_remove_from_front(list_t *l) {
 
 //Remove at certain index position
 elem list_remove_at_index(list_t *l, int index) { 
-  list_t current = current;                                                                               
+  node_t current = list_t -> head;                                                                             
 	if(current==NULL){
 		printf("Linked List is empty \n"); 
 		return;
@@ -179,7 +179,7 @@ elem list_remove_at_index(list_t *l, int index) {
 
 //Check if an element is present in  list
 bool list_is_in(list_t *l, elem value) { 
-  list_t current = current;
+  node_t current = list_t -> head;
   int index = 0;
   while (current != NULL){
     if (current->data == value){
